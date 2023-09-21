@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Barlow&family=Chakra+Petch:wght@600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffee08;
+    --caption-color: #63ed01;
+    --background-color: #030816;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.app {
+    background: var(--background-color);
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.layout {
+    max-width: 24.375rem;
+    padding: 2.5rem 0;
+}
+
+.extraControls {
+    margin-top: 2.625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dot {
+    position: absolute;
+    bottom: -2px;
+    left: 0.675rem;
+    width: 0.3125rem;
+    height: 0.3125rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+#canvasWrapper canvas {
+    outline: 2px solid var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+    .app {
+        align-items: center;
+    }
+
+    .layout {
+        padding: 2.5rem;
+        background-color: rgba(3, 8, 22, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        border-right-color: rgba(255, 255, 255, 0.2);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 5px 5px 15px 4px rgba(255, 238, 8, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        line-height: normal;
+    }
+}
+
+@media only screen and (max-height: 640px) {
+    .app {
+        align-items: center;
+    }
+}
